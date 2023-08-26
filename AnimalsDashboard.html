@@ -28,14 +28,14 @@
 
     <script>
         let tableHTML = '<table>';          /* this initializes a tableHTML variable */
-            tableHTML += '<tr><th> Animal ID </th><th> Animal Name </th><th> Owner Name </th><th> Weight </th><th> Age </th></tr> ';
+            tableHTML += '<tr><th> Animal ID </th><th> Animal Name </th><th> Owner Name </th><th> Weight </th><th> Age </th><th> Age Bracket </th></tr> ';
                         /* This represents the table rows and its table headers for the columns  */
         const animals = [   /* This is an array containing the informtaion about the animals    */
             
             /* { id: 1, name: "Fluffy", owner: "Alice", weight: 12, age: 3},
             { id: 2, name: "Max", owner: "Bob", weight: 20, age: 5}, */
 
-            { id: 1, name: "Avery", owner: "Zoe", weight: 5, age: 0.2},
+            { id: 1, name: "Avery", owner: "Zoe", weight: 5, age: 0.2},     /* animal information that will populate the table */
             { id: 2, name: "Betty", owner: "Ynah", weight: 3, age: 0.4},
             { id: 3, name: "Connie", owner: "Xavier", weight: 4, age: 0.6},
             { id: 4, name: "Demi", owner: "Willow", weight: 6, age: 0.8},
@@ -56,9 +56,30 @@
             { id: 16, name: "Peanut", owner: "Katy", weight: 20, age: 20}
         ];
 
+        function getAgeBracket(age)
+        {
+            if (age <= 0.9)
+            {
+                return "Puppy";
+            }
+            else if (age <= 10 && age >= 0.91)
+            {
+                return "Adult";
+            }
+            else if (age <= 15 && age >= 10.1)
+            {
+                return "Senior";
+            }
+            else
+            {
+                return "Geriatric";
+            }
+        }
+
         for (i = 0; i < animals.length; i++)
         {
-            tableHTML += `<tr> <td> ${animals[i].id} </td> <td> ${animals[i].name} </td> <td> ${animals[i].owner} </td> <td> ${animals[i].weight} </td> <td> ${animals[i].age} </td> </tr> `;
+            const ageBracket = getAgeBracket(animals[i].age);
+            tableHTML += `<tr> <td> ${animals[i].id} </td> <td> ${animals[i].name} </td> <td> ${animals[i].owner} </td> <td> ${animals[i].weight} </td> <td> ${animals[i].age} </td> <td> ${ageBracket} </td> </tr> `;
         }
 
         tableHTML+= '</table>'; /* closes the table variable*/
