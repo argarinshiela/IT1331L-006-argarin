@@ -27,16 +27,39 @@
     <div id = "animal-table"> </div>
 
     <script>
-        let tableHTML = '<table>';
+        let tableHTML = '<table>';          /* this initializes a tableHTML variable */
             tableHTML += '<tr><th> Animal ID </th><th> Animal Name </th><th> Owner Name </th><th> Weight </th><th> Age </th></tr> ';
+                        /* This represents the table rows and its table headers for the columns  */
+        const animals = [   /* This is an array containing the informtaion about the animals    */
+            
+            /* { id: 1, name: "Fluffy", owner: "Alice", weight: 12, age: 3},
+            { id: 2, name: "Max", owner: "Bob", weight: 20, age: 5}, */
 
-        const animals = [
-            { id: 1, name: "Fluffy", owner: "Alice", weight: 12, age: 3},
-            { id: 2, name: "Max", owner: "Bob", weight: 20, age: 5}
+            { id: 1, name: "Avery", owner: "Zoe", weight: 5, age: 0.2},
+            { id: 2, name: "Betty", owner: "Ynah", weight: 3, age: 0.4},
+            { id: 3, name: "Connie", owner: "Xavier", weight: 4, age: 0.6},
+            { id: 4, name: "Demi", owner: "Willow", weight: 6, age: 0.8},
+
+            { id: 5, name: "Etti", owner: "Vera", weight: 10, age: 3},
+            { id: 6, name: "Fin", owner: "Unie", weight: 13, age: 6},
+            { id: 7, name: "Gie", owner: "Tina", weight: 15, age: 9},
+            { id: 8, name: "Hunter", owner: "Seth", weight: 14, age: 10},
+
+            { id: 9, name: "Ivory", owner: "Reese", weight: 21, age: 12},
+            { id: 10, name: "Jockie", owner: "Quentin", weight: 23, age: 13},
+            { id: 11, name: "Kleein", owner: "Peter", weight: 20, age: 14},
+            { id: 12, name: "Liah", owner: "Olivia", weight: 19, age: 11},
+
+            { id: 13, name: "Maximus", owner: "Nolan", weight: 21, age: 16},
+            { id: 14, name: "Nemo", owner: "Matthew", weight: 20, age: 18},
+            { id: 15, name: "Oaky", owner: "Landon", weight: 23, age: 21},
+            { id: 16, name: "Peanut", owner: "Katy", weight: 20, age: 20}
         ];
 
-        tableHTML+= '</table>';
-        document.getElementById('animal-table').innerHTML = tableHTML;
+        
+
+        tableHTML+= '</table>'; /* closes the table variable*/
+        document.getElementById('animal-table').innerHTML = tableHTML;      /* retrieves the ID of the animal-table and inserts the generated HTML table */
     </script>
 </body>
 </html>
