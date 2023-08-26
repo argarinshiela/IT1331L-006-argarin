@@ -56,7 +56,10 @@
             { id: 16, name: "Peanut", owner: "Katy", weight: 20, age: 20}
         ];
 
-        
+        for (i = 0; i < animals.length; i++)
+        {
+            tableHTML += `<tr> <td> ${animals[i].id} </td> <td> ${animals[i].name} </td> <td> ${animals[i].owner} </td> <td> ${animals[i].weight} </td> <td> ${animals[i].age} </td> </tr> `;
+        }
 
         tableHTML+= '</table>'; /* closes the table variable*/
         document.getElementById('animal-table').innerHTML = tableHTML;      /* retrieves the ID of the animal-table and inserts the generated HTML table */
